@@ -1,0 +1,11 @@
+{
+    "name": "yohan/rapidouche",
+    "type": "project",
+    "authors": [
+        {
+            "name": "YohanWildz",
+            "email": "widogue.yohan@gmail.com"
+        }
+    ],
+    "require": {}
+}

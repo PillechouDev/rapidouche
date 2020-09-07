@@ -1,0 +1,49 @@
+<!--Navbar -->
+<nav class="mb-1 navbar navbar-expand-lg navbar-light default-color">
+  
+    <img src="resources\logo.png" alt="" id="logo">
+  
+    <a class="navbar-brand" href="?page=homepage">Projet</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+      aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+      <ul class="navbar-nav mr-auto">
+        
+        <li class="nav-item active">
+          <a class="nav-link" href="?page=homepage">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="?page=contact" >Contact</a>
+        </li>
+      </ul>
+      <span class="navbar-text">
+        Slogan du site !  
+      </span>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Mon compte 
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          {% if userLogged== FALSE %}
+          <a class="dropdown-item" href="?page=login">Se connecter</a>
+          <a class="dropdown-item" href="?page=signup">Pas de compte ? <br> S'incrire </a>
+          {% else %}
+          <a class="dropdown-item" href="?page=userssettings">Mon compte</a>
+          <a class="dropdown-item" href="?page=login&action=logout">Se déconnecter </a>
+          {% endif %}
+          {% if admin == 1 %}
+          <a class="dropdown-item" href="?page=admin">Espace Admin</a>
+          {% endif %}
+          {% if vendeur == 1 %}
+          <a class="dropdown-item" href="?page=vendeur">Espace vendeur</a>
+          {% endif %}
+        </div>
+</ul>
+    </div>
+  </nav>
+  <!--/.Navbar -->

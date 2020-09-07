@@ -1,0 +1,31 @@
+{% extends ['layout.html'] %}
+ {% block title %}Inscription{% endblock %}
+ {% block body %}
+ 
+
+
+<div>
+    <form action="?page=signup&action=singup" method="post">
+    <p>Inscription</p>
+    <input type="email" name="email" id="email" placeholder="Entrez votre email">
+    <input type="email2" name="email2" id="email2" placeholder="Comfirmer votre email">
+    <br>
+    <label for="cat">Entrez votre mot de passe 8 caractères minimum</label>
+    <input type="password" name="cat" id="cat" placeholder="Entrez votre mot de passe">
+    <br>
+    <label for="cat2">Confirmez votre mot de passe</label>
+    <input type="password" name="cat2" id="cat" placeholder="Confirmez votre mot de passe">
+
+    <br>
+    <label for="upic">Choisissez une photo de profil</label>
+    <input type="file" name="upic" id="">
+    <br>
+    <label for="birth">Votre date de naissance</label>
+    <input type="date" name="birth" id="" placeholder="Votre date de naissance">
+    <label for="adress">Entre votre adressee </label>
+    <input type="text" name="adress" placeholder="Entre votre adresse">
+    <button type="submit">S'inscrire</button>
+</form>
+</div>
+
+ {% endblock %}

@@ -1,0 +1,12 @@
+
+#image{
+    position: relative;
+}
+
+#size-group{
+    position: absolute;
+    top: 190px;
+    background-color: blue;
+    color: azure;
+    left: 260px;
+}
