@@ -1,11 +1,24 @@
 {
-    "name": "yohan/rapidouche",
+    "name": "yoyo/rapidouche",
     "type": "project",
     "authors": [
         {
-            "name": "YohanWildz",
+            "name": "Widogue",
             "email": "widogue.yohan@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "twig/twig": "^3.0"
+    },
+    "autoload": {
+        "files": [
+            "app/controllers/main.controller.php",
+            "app/controllers/footer.controller.php",
+            "app/controllers/header.controller.php",
+            "app/controllers/homepage.controller.php",
+            "app/controllers/signup.controller.php",
+            "app/helpers/renderer.helper.php",
+            "app/helpers/database.helper.php"
+        ]
+    }
 }
