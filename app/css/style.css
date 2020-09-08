@@ -11,7 +11,7 @@
     left: 260px;
 }
 
-div.stats{
+div.stats_water{
     background: blue;
     color: white;
     border-radius: 4%;
@@ -19,8 +19,30 @@ div.stats{
     height: 70px;
     margin: 10px;
     padding: 10px;
+    text-align: center;
+    text-shadow: 3px 1px darkblue;
 }
 
-p.money{
-    color: red;
+div.stats_money{
+    background: green;
+    color: white;
+    border-radius: 4%;
+    width: 200px;
+    height: 70px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    text-shadow: 3px 1px darkgreen;
+}
+
+.euro{
+    color: white;
+    font-size: 30px;
+    margin-left: 5px;
+}
+
+.liter{
+    color: white;
+    font-size: 30px;
+    margin-left: 5px;
 }
