@@ -18,7 +18,9 @@
             "app/controllers/homepage.controller.php",
             "app/controllers/signup.controller.php",
             "app/helpers/renderer.helper.php",
-            "app/helpers/database.helper.php"
+            "app/helpers/database.helper.php",
+            "app/models/moneysaved.model.php",
+            "app/models/watersaved.model.php"
         ]
     }
 }
