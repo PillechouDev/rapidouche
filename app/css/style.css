@@ -17,10 +17,12 @@ div.stats_water{
     border-radius: 4%;
     width: 200px;
     height: 70px;
-    margin: 10px;
+    margin: 10px auto;
     padding: 10px;
     text-align: center;
     text-shadow: 3px 1px darkblue;
+    border: 1px solid black;
+    box-shadow: 5px 2px 2px darkblue;
 }
 
 div.stats_money{
@@ -29,10 +31,12 @@ div.stats_money{
     border-radius: 4%;
     width: 200px;
     height: 70px;
-    margin: 10px;
+    margin: 10px auto;
     padding: 10px;
     text-align: center;
     text-shadow: 3px 1px darkgreen;
+    border: 1px solid black;
+    box-shadow: 5px 2px 2px darkgreen;
 }
 
 .euro{
@@ -45,4 +49,9 @@ div.stats_money{
     color: white;
     font-size: 30px;
     margin-left: 5px;
+}
+
+.titre{
+    margin-top: 40px;
+    text-align: center
 }
