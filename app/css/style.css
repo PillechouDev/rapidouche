@@ -55,3 +55,9 @@ div.stats_money{
     margin-top: 40px;
     text-align: center
 }
+
+.footer{
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
