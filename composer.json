@@ -8,7 +8,10 @@
         }
     ],
     "require": {
-        "twig/twig": "^3.0"
+        "twig/twig": "^3.0",
+        "facebook/graph-sdk": "^5.7",
+        "php-http/curl-client": "^2.1",
+        "guzzlehttp/psr7": "^1.6"
     },
     "autoload": {
         "files": [
@@ -19,6 +22,7 @@
             "app/controllers/signup.controller.php",
             "app/helpers/renderer.helper.php",
             "app/helpers/database.helper.php",
+            "app/helpers/facebook.helpers.php",
             "app/models/moneysaved.model.php",
             "app/models/watersaved.model.php"
         ]

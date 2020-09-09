@@ -37,7 +37,7 @@ FB.getLoginStatus(function(response) {
 });
 
 
-
+document.getElementById('fff').contains
 
 
 function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
@@ -62,7 +62,7 @@ function testAPI() {                      // Testing Graph API after login.  See
   console.log('Welcome!  Fetching your information.... ');
   FB.api('/me', function(response) {
     console.log('Successful login for: ' + response.name);
-    console.log('List friends : '+ response.user_friends);
+    console.log('List friends in app : '+ response.email);
     document.getElementById('status').innerHTML =
       'Thanks for logging in, ' + response.name + '!';
   });
