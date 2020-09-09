@@ -1,18 +1,3 @@
-// const button = document.querySelector('button')
-// const p = document.createElement('p')
-// const container = document.querySelector('.container-score')
-// let score = 0
-// if (button) {
-//     button.addEventListener('click', () => {
-//         score += 10
-//         p.innerHTML = score
-//         if (score >= 100) {
-//             alert('Gagné')
-//         }
-//     })
-//     container.appendChild(p)
-// }
-
 // Chrono
 // default value
 let base;
