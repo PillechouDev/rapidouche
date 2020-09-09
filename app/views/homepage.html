@@ -2,10 +2,12 @@
  {% block title %}Accueil{% endblock %}
  {% block body %}
  
-<p>TEST</p>
+<div>
+    {%include "stopwatch.html" %}
+    {%include "moneysaved.html" %}
+    {%include "watersaved.html" %}
+</div>
 
-{%include "moneysaved.html" %}
-{%include "watersaved.html" %}
 
 
 

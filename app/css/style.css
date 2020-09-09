@@ -17,10 +17,12 @@ div.stats_water{
     border-radius: 4%;
     width: 200px;
     height: 70px;
-    margin: 10px;
+    margin: 10px auto;
     padding: 10px;
     text-align: center;
     text-shadow: 3px 1px darkblue;
+    border: 1px solid black;
+    box-shadow: 5px 2px 2px darkblue;
 }
 
 div.stats_money{
@@ -29,10 +31,12 @@ div.stats_money{
     border-radius: 4%;
     width: 200px;
     height: 70px;
-    margin: 10px;
+    margin: 10px auto;
     padding: 10px;
     text-align: center;
     text-shadow: 3px 1px darkgreen;
+    border: 1px solid black;
+    box-shadow: 5px 2px 2px darkgreen;
 }
 
 .euro{
@@ -45,4 +49,120 @@ div.stats_money{
     color: white;
     font-size: 30px;
     margin-left: 5px;
+}
+
+.titre{
+    margin-top: 40px;
+    text-align: center
+}
+
+.footer{
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*chrono*/
+.wrap {
+    display: inline-block;
+    min-width: 360px;
+    min-height: 400px;
+    padding: 50px 15px;
+    background-color: #fff;
+    box-shadow: 0 5px 25px #00004a;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#timer {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    line-height: 250px;
+    border-radius: 50px;
+    font-size: 32px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+p {
+    font-weight: 400;
+    color: gray;
+    padding: 30px 0;
+}
+
+.option a {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+#play,
+#reset {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    border-radius: 50%;
+    color: #fff;
+    background: linear-gradient(45deg, #ff88fb, #ff00ec);
+    box-shadow: 0 8px 25px #bf5fc045, 0 8px 25px #ff00ec50;
+    transition: all ease 0.1s;
+}
+
+#stop {
+    padding: 15px 20px;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 400;
+    background: linear-gradient(45deg, #607d8b, #ff00ec);
+    box-shadow: 0 8px 25px #bf5fc045, 0 8px 25px #ff00ec50;
+    transition: all ease 0.1s;
+}
+
+#play:active,
+#reset:active,
+#stop:active {
+    transform: scale(0.95);
+}
+
+#stop .fa {
+    margin-right: 5px;
+}
+
+.fa-play {
+    padding-left: 5px;
+}
+
+.pause .fa-play,
+.fa-pause {
+    display: none;
+}
+
+.pause .fa-pause {
+    display: inline-block;
+}
+
+
+/* Circle Animation */
+
+#timer svg {
+    position: absolute;
+    left: 0;
+}
+
+.addAnimation {
+    stroke-dasharray: 770;
+    stroke-dashoffset: -770;
+    animation: animateCircle 60s linear infinite;
+    animation-play-state: paused;
+}
+
+@keyframes animateCircle {
+    from {
+        stroke-dashoffset: 0;
+    }
+}
+
+.defaultCircle {
+    opacity: 0.3;
 }
