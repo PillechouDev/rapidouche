@@ -1,0 +1,44 @@
+<div class="container titre">
+    <div class="wrap">
+        <div id="timer">
+            <svg width="260" height="260">
+        <circle
+          class="defaultCircle"
+          cx="125"
+          cy="125"
+          r="120"
+          stroke="#ff88fb"
+          stroke-width="10"
+          fill="none"
+          stroke-linecap="round"
+        />
+        <circle
+          id="animateCircle"
+          cx="125"
+          cy="125"
+          r="120"
+          stroke="#d459cb"
+          stroke-width="10"
+          fill="none"
+          stroke-linecap="round"
+        />
+      </svg>
+            <span id="hour">00</span> : <span id="minute">00</span> :
+            <span id="second">00</span> : <span id="millisecond">00</span>
+        </div>
+        <p class="titre">Your time starts now</p>
+        <div class="option">
+            <a onclick="playFunc()" id="play" href="javascript:void(0)">
+                <i class="fa fa-play"></i>
+                <i class="fa fa-pause"></i
+      ></a>
+      <a onclick="stopFunc()" id="stop" href="javascript:void(0)">
+        <i class="fa fa-stop"> Stop</i></a>
+            <a onclick="resetFunc()" id="reset" href="javascript:void(0)">
+                <i class="fa fa-undo"></i
+      ></a>
+    </div>
+  </div>
+  <div class="container-score"></div>
+</div>
+
