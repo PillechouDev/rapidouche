@@ -10,6 +10,12 @@ function getMainController(){
             case "signup":
                 getSignupController();
             break;
+            case "challenge":
+                getChallengeController();
+            break;
+            case "viking":
+                getVikingController();
+            break;
             default:
             getHomepageController();
         break;
