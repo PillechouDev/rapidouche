@@ -4,6 +4,10 @@ namespace Controllers;
 
 
 function getMainController(){
+    if(isset($_GET['page']) && $_GET['page'] == "endshower"){	 
+        getEndShowerController();	   
+    }	
+    else{
     getHeaderController();
     if(isset($_SESSION['token'])){
         if(isset($_GET['page'])){
@@ -40,5 +44,6 @@ function getMainController(){
         getSignupController();
     }
     getFooterController();
+}
 }
 ?>
