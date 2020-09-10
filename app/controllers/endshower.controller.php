@@ -39,4 +39,5 @@ function eau(){
 function argent(){
     return $_GET["argent"];
 }
+
 ?>

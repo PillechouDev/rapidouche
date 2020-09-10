@@ -2,9 +2,17 @@
  
  {% block body %}
  
-<img src="app/assets/img/loadinglogo.png" width="100%">
-    {% set foo = 0 %}
-    {% set foo = user[0].moneysaved + argent %}
+<!--<img src="app/assets/img/loadinglogo.png" width="100%"> -->
+
+    
+    {% set dollar = 0 %}
+    {% set dollar = user[0].moneysaved + argent %}
+
+    {% set aqua = 0 %}
+    {% set aqua = user[0].watersaved + eau %}
+
+
+    <a href="?page=homepage&totalargent={{dollar}}&totaleau={{aqua}}">Test</a>
     
 
  
