@@ -70,7 +70,7 @@ document.getElementById("twitter").onclick = function() {
     let score = timer();
     console.log(score);
     window.open(
-        `https://twitter.com/intent/tweet?text=Regardez j' ai mis ${score} &hashtags=Rapidouche&url=https://www.youtube.com/watch?v=LV_OXlBhVS4`,
+        `https://twitter.com/intent/tweet?text=Regardez j' ai mis ${score} &hashtags=Rapidouche`,
         "twitter",
         "height=300, width=550, scrollbars=0, menubar=0"
     );
