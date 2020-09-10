@@ -4,11 +4,8 @@ namespace Controllers;
 
 
 function getMainController(){
-    if(isset($_GET['page']) && $_GET['page'] == "endshower"){
-        getEndShowerController();
-    }
-    else{
-        getHeaderController();
+    getHeaderController();
+    if(isset($_SESSION['token'])){
         if(isset($_GET['page'])){
             switch($_GET['page']){
                 case "signup":
@@ -23,18 +20,25 @@ function getMainController(){
                 default:
                 getHomepageController();
             break;
-            }
-        }
-        else{
-            getHomepageController();
-        }
             
-            
-            getFooterController();
-        
-
         }
 
     }
+    else 
+    {
+        getHomepageController();
+        
+    }
     
+        
+        
+        
+    
+
+    }
+    else {
+        getSignupController();
+    }
+    getFooterController();
+}
 ?>

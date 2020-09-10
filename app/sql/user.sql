@@ -32,8 +32,10 @@ DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `token` text NOT NULL,
-  `watersaved` float NOT NULL,
-  `moneysaved` float NOT NULL,
+  `mail` text NOT NULL,
+  `name` text NOT NULL,
+  `watersaved` float NOT NULL DEFAULT '0',
+  `moneysaved` float NOT NULL DEFAULT '0',
   PRIMARY KEY (`ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 COMMIT;
