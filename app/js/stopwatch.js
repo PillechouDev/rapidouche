@@ -105,6 +105,22 @@ function timer() {
         hour = ++hour;
     }
 
+
+    if (second == 10){
+        var audio = new Audio("app/assets/sons/bip5.mp3")
+        audio.play()
+    }
+
+    if (minute == 5){
+        var audio = new Audio("app/assets/sons/bip5.mp3")
+        audio.play()
+    }
+
+    if (minute == 10){
+        var audio = new Audio("app/assets/sons/bip10.mp3")
+        audio.play()
+    }
+
     milli.innerHTML = millisecondVal;
     sec.innerHTML = secondVal;
     minu.innerHTML = minuteVal;
