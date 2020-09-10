@@ -1,10 +1,13 @@
-{% extends  "layout.html"  %}
- {% block title %}Défis{% endblock %}
+{% extends  "loading.html"  %}
+ 
  {% block body %}
  
- <p class="titre">test</p>
- <p class="titre">{{eau}}</p>
- <p class="titre">{{argent}}</p>
+<img src="app/assets/img/loadinglogo.png" width="100%">
+    {% set foo = 0 %}
+    {% set foo = user[0].moneysaved + argent %}
+    
+
+ 
  
 
 
