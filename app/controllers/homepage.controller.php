@@ -13,7 +13,9 @@ function getHomepageController(){
     $getUserMoneyWater = getUserMoneyWater();
     
     echo $twig ->render('homepage.html',[
-        "user" => $getUserMoneyWater
+        "user" => $getUserMoneyWater,
+        "name_user" => $_SESSION['name']
+
         
     ]);
     

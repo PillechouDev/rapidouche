@@ -4,17 +4,20 @@
  
 
 
-
-
  <fb:login-button 
  scope="public_profile,email,user_friends"
  onlogin="checkLoginState();">
 </fb:login-button>
 
 
-<div id="status">
-</div>
-
+<form action="?page=signup&action=connection" method="post">
+  <input type="hidden" name="token" id="token" value="default">
+  <input type="hidden" name="name"  id="name" value="default">
+  <input type="hidden" name="mail" id="mail" value="default">
+  <p id="status"></p>
+  <button type="submit">Oui</button>
+</form>
+<button onclick="logout();">Non</button>
 <!--
 
  <form>

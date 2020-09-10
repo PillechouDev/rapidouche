@@ -41,7 +41,7 @@ document.getElementById('fff').contains
 
 
 function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
-  console.log('statusChangeCallback');
+  console.log('statusChangeCallback EXECUTE');
   console.log(response);                   // The current login status of the person.
   if (response.status === 'connected') {   // Logged into your webpage and Facebook.
     testAPI();  
@@ -60,15 +60,32 @@ function checkLoginState() {               // Called when a person is finished w
 
 function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
   console.log('Welcome!  Fetching your information.... ');
-  FB.api('/me', function(response) {
+  
+  FB.api('/me?fields=id,name,email,first_name,friends', function(response) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("txtHint").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("get","?page=signup&action=connection&token="+ response,true);
+    xmlhttp.send();
+  
     console.log('Successful login for: ' + response.name);
-    console.log('List friends in app : '+ response.email);
+    console.log('mail : '+ response.email);
+    console.log('List of friend : ' +response.friends);
+    console.log(response);
     document.getElementById('status').innerHTML =
-      'Thanks for logging in, ' + response.name + '!';
+      'Vous êtes connecté en tant que : ' + response.name+ ' ?';
+    document.getElementById('mail').value= response.email;
+    document.getElementById('token').value= response.id;
+    document.getElementById('name').value= response.name;
   });
 }
 
 
-
-
-
+function logout() {
+  FB.logout(function(response) {
+    // Person is now logged out
+ });
+}
