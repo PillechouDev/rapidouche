@@ -16,6 +16,9 @@ function getMainController(){
             case "viking":
                 getVikingController();
             break;
+            case "endshower":
+                getEndShowerController();
+            break;
             default:
             getHomepageController();
         break;

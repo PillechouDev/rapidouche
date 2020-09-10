@@ -168,6 +168,7 @@ function stopFunc() {
         spanE.innerHTML = "";
         spanE.innerText = `${economieEuro} € économisé`;
         // pMoneySaved.classList.add("euro");
+        document.location.href="?page=endshower"
     } else {
         spanE.innerHTML = "";
         spanE.innerText = `${economieEuro} € perdu`;
