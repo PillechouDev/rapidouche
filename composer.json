@@ -22,6 +22,7 @@
             "app/controllers/signup.controller.php",
             "app/controllers/challenge.controller.php",
             "app/controllers/viking.controller.php",
+            "app/controllers/endshower.controller.php",
             "app/helpers/renderer.helper.php",
             "app/helpers/database.helper.php",
             "app/helpers/facebook.helpers.php",

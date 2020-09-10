@@ -20,9 +20,8 @@ function getMainController(){
                 default:
                 getHomepageController();
             break;
-            }
-        }
-        else{
+
+                
             getHomepageController();
         }
     }
