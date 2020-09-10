@@ -10,6 +10,18 @@ const p = document.createElement("p");
 const divScore = document.querySelector(".container-score");
 const playy = document.getElementById("play");
 const animateCircle = document.querySelector("#animateCircle");
+const divMoney = document.querySelector(".stats_money");
+const divLiter = document.querySelector(".stats_water");
+const spanE = document.querySelector("#euro");
+const spanL = document.querySelector("#liter");
+const pMoneySaved = document.createElement("p");
+const pLiterSaved = document.createElement("p");
+const moyenneTemps = 20; // en secondes
+const moyenneLitre = moyenneTemps * 0.25; // litres par sec
+const prixLittre = 0.00005; // prix Littre par sec
+const prixMoyen = moyenneTemps * prixLittre;
+let economieEuro = 0; // par mois
+let economieLittre = 0; // par mois
 
 function playFunc() {
     playPause = playPause + 1;
@@ -53,6 +65,24 @@ let millisecondVal = 0;
 let secondVal = 0;
 let minuteVal = 0;
 let hourVal = 0;
+
+document.getElementById("twitter").onclick = function() {
+    let score = timer();
+    console.log(score);
+    window.open(
+        `https://twitter.com/intent/tweet?text=Regardez j' ai mis ${score} &hashtags=Rapidouche&url=https://www.youtube.com/watch?v=LV_OXlBhVS4`,
+        "twitter",
+        "height=300, width=550, scrollbars=0, menubar=0"
+    );
+};
+
+document.getElementById("facebook").onclick = function() {
+    window.open(
+        "https://www.facebook.com/sharer/sharer.php?t=Regardez j' ai mis x temps&u=https://www.youtube.com/watch?v=LV_OXlBhVS4&amp;src=sdkpreparse",
+        "facebook",
+        "height=300, width=550, scrollbars=0, menubar=0"
+    );
+};
 
 function timer() {
     millisecondVal = updateTime(millisecond);
@@ -125,6 +155,36 @@ function resetFunc() {
 }
 
 function stopFunc() {
+    let score = timer();
+    p.innerText = `Votre score est de : ${score}`;
+    divScore.appendChild(p);
+    let tempsDouche = second;
+
+    economieEuro = (prixMoyen - tempsDouche * prixLittre).toFixed(3);
+    economieLittre = (moyenneLitre - tempsDouche * 0.25).toFixed(3);
+    console.log(economieEuro);
+    console.log(economieLittre);
+    if (economieEuro > 0) {
+        spanE.innerHTML = "";
+        spanE.innerText = `${economieEuro} € économisé`;
+        // pMoneySaved.classList.add("euro");
+    } else {
+        spanE.innerHTML = "";
+        spanE.innerText = `${economieEuro} € perdu`;
+        // pMoneySaved.classList.add("euro");
+    }
+    if (economieLittre > 0) {
+        spanL.innerHTML = "";
+        spanL.innerText = `${economieLittre} L économisé`;
+        // spanL.classList.add("liter");
+    } else {
+        spanL.innerHTML = "";
+        spanL.innerText = `${economieLittre} L gaspillé`;
+        // pLiterSaved.classList.add("liter");
+    }
+
+    divMoney.appendChild(pMoneySaved);
+    divLiter.appendChild(pLiterSaved);
     clearInterval(base);
     resetFunc();
 

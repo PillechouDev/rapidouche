@@ -1,7 +1,7 @@
 {% extends "layout.html" %} {% block title %}Accueil{% endblock %} {% block body %}
 
 <div>
-    <div class="container titre">
+    <div class="container">
         <div class="wrap">
             <div id="timer">
                 <svg width="260" height="260">
@@ -32,17 +32,26 @@
             <p class="titre">Your time starts now</p>
             <div class="option">
                 <a onclick="playFunc()" id="play" href="javascript:void(0)">
-                    <i class="fa fa-play"></i>
-                    <i class="fa fa-pause"></i
-        ></a>
-        <a onclick="stopFunc()" id="stop" href="javascript:void(0)">
-          <i class="fa fa-stop"> Stop</i></a>
+                    <p class="fa fa-play"></p>
+                    <p class="fa fa-pause"></p>
+                </a>
+                <a onclick="stopFunc()" id="stop" href="javascript:void(0)">
+                    <i class="fa fa-stop"> Stop</i>
+                </a>
                 <a onclick="resetFunc()" id="reset" href="javascript:void(0)">
-                    <i class="fa fa-undo"></i
-        ></a>
+                    <p class="fa fa-undo"></p>
+                </a>
+            </div>
+        </div>
+        <div class="container-score">
+            <div class="text-center">
+                <button id="twitter" class="btn btn-lg btn-primary">
+          <i class="fa fa-twitter"></i> Twitter
+        </button>
+                <a id="facebook" class="btn btn-lg btn-primary"><i class="fa fa-facebook"></i> Facebook</a
+        >
       </div>
     </div>
-    <div class="container-score"></div>
   </div>
   {%include "moneysaved.html" %} {%include "watersaved.html" %}
 </div>
