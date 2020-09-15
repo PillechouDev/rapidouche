@@ -78,7 +78,7 @@ document.getElementById("twitter").onclick = function() {
 
 document.getElementById("facebook").onclick = function() {
     window.open(
-        "https://www.facebook.com/sharer/sharer.php?t=Regardez j' ai mis x temps&u=https://www.youtube.com/watch?v=LV_OXlBhVS4&amp;src=sdkpreparse",
+        "https://www.facebook.com/sharer/sharer.php?t=Regardez j' ai mis 00 h 01 m 50 s 93 à me doucher! Pouvez-vous mieux faire ?&u=https://www.youtube.com/watch?v=LV_OXlBhVS4&amp;src=sdkpreparse",
         "facebook",
         "height=300, width=550, scrollbars=0, menubar=0"
     );
